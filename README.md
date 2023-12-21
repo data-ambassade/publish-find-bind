@@ -14,3 +14,26 @@ De opties voor de te kiezen catalogus zijn in de node 'catalogus' zichtbaar.
 <img width="1031" alt="image" src="https://github.com/data-ambassade/publish-find-bind/assets/66671799/cf9fcef7-5c98-41a8-9fa2-e76bd81aef42">
 
 <img width="502" alt="image" src="https://github.com/data-ambassade/publish-find-bind/assets/66671799/2d55b12d-551f-4844-93c9-a06d3735d51f">
+
+De OpenApi kan je direct aanroepen, bijvoorbeeld via Swagger (gebruik data-ambassade account van github). 
+https://app.swaggerhub.com/apis/Data-Ambassade9/publish-find_bind/v1#/default/get_product_pfb
+
+De OpenApi is tevens ontsloten als GraphQL endpoint via Wundergraph. Met Wundergraph kan je meerdere technische API's publiceren als GraphQL endpoint. Te bereiken via: https://scaapidata.scamanderhost.com/graphql
+
+Daarin kan je deze query uitproberen waarbij je een dataset zoekt in de catalogus van het Open Urban Platform.
+
+query publish_find_bind ($catalogus: String!, $zoekterm: String!) {
+  product_pfb_getProductPfb(catalogus: $catalogus, zoekterm: $zoekterm) {
+    catalog
+    title
+    description
+    accessurl
+    format
+  }
+}
+Met als variabelen:
+
+{
+  "catalogus": "oup.rotterdam.nl",
+  "zoekterm": "drinkwater"
+}
