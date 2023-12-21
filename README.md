@@ -38,7 +38,8 @@ Met als variabelen:
   "zoekterm": "drinkwater"
 }
 
-#Qgis plugin.
+
+##Qgis plugin.
 
 In Qgis kan je een zogenaamde plug-in installeren. Installeer de CKAN plug-in en configureer deze zodanig dat je daarmee een eigen catalogus kan aanroepen in plaats van een CKAN catalogus. 
 
