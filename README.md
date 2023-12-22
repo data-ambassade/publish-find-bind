@@ -22,7 +22,7 @@ De OpenApi is tevens ontsloten als GraphQL endpoint via Wundergraph. Met Wunderg
 
 Daarin kan je deze query uitproberen waarbij je een dataset zoekt in de catalogus van het Open Urban Platform.
 
-query publish_find_bind ($catalogus: String!, $zoekterm: String!) {
+\query publish_find_bind ($catalogus: String!, $zoekterm: String!) {
   product_pfb_getProductPfb(catalogus: $catalogus, zoekterm: $zoekterm) {
     catalog
     title
@@ -30,30 +30,31 @@ query publish_find_bind ($catalogus: String!, $zoekterm: String!) {
     accessurl
     format
   }
-}
+}\
+
 Met als variabelen:
 
-{
+\{
   "catalogus": "oup.rotterdam.nl",
   "zoekterm": "drinkwater"
-}
+}\
 
 
-##Qgis plugin.
+## Qgis plugin.
 
-In Qgis kan je een zogenaamde plug-in installeren. Installeer de CKAN plug-in en configureer deze zodanig dat je daarmee een eigen catalogus kan aanroepen in plaats van een CKAN catalogus. 
+In Qgis kan je een zogenaamde plug-in installeren. Installeer via het menu 'Plugins' van Qgis de CKAN plug-in en configureer deze zodanig dat je daarmee een eigen catalogus kan aanroepen in plaats van een CKAN catalogus. 
 
 <img width="563" alt="image" src="https://github.com/data-ambassade/publish-find-bind/assets/66671799/63b7377e-3636-436e-aa43-c68c25e2f93b">
 
-Open de CKAN browser en kies 'Select CKAN server'.
+Open via het menu van de Plugins de CKAN browser en kies 'Select CKAN server'.
 
 <img width="808" alt="image" src="https://github.com/data-ambassade/publish-find-bind/assets/66671799/3ad678dc-4a12-46e4-86a5-02065e647ccf">
 
 Maak hierin twee nieuwe verwijzingen aan ('Add CKAN server to list') voor het aanroepen van 
 - het open data portaal (data.rotterdam.nl): https://client.data-ambassade.nl/opendatarotterdam/api/3
 - het Open Urban Platform: https://client.data-ambassade.nl/oup/api/3
-Druk op Test om te kijken of ze werken. En daarna onderaan op Save om de instelling te bewaren.
-Je kan in het vakje voorafgaand aan de CKAN serverlijst aanvinken welke je wilt gebruiken.
+
+Druk op Test om te kijken of ze werken. Selecteer het open data portaal van Rotteram. En daarna onderaan op Save om de instelling te bewaren.
 
 Dit is het resultaat bijvoorbeeld bij het zoeken op TIR in het opendata portaal van Rotterdam
 <img width="803" alt="image" src="https://github.com/data-ambassade/publish-find-bind/assets/66671799/194bf833-d9cb-4781-9eb7-d5c49c171eca">
