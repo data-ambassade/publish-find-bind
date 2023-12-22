@@ -1,6 +1,8 @@
-# publish-find-bind
-De functionale API voor het vinden van datasets en dataservices met een keuze voor welke catalogus en welke zoekterm.
+# Generieke Catalogus service API
+
+Defunctionale API voor het vinden van datasets en dataservices met een keuze voor welke catalogus en welke zoekterm.
 Beschikbaar als OpenApi YAML specificatie met een aanroep naar een end-point waarin de logica ingevuld is met nodered. 
+Deze API is ontwikkeld in het project Open Data Moet Stromen onder de naam: publish-find-bind.
 
 Het endpoint is: https://client.data-ambassade.nl/product/pfb
 
@@ -22,13 +24,15 @@ De OpenApi is tevens ontsloten als GraphQL endpoint via Wundergraph. Met Wunderg
 
 Daarin kan je deze query uitproberen waarbij je een dataset zoekt in de catalogus van het Open Urban Platform.
 
-query publish_find_bind ($catalogus: String!, $zoekterm: String!) {
-  product_pfb_getProductPfb(catalogus: $catalogus, zoekterm: $zoekterm) {
-    catalog
-    title
-    description
-    accessurl
-    format
+query publish_find_bind ($catalogus: String!, $zoekterm: String!) 
+{
+    product_pfb_getProductPfb(catalogus: $catalogus, zoekterm: $zoekterm) 
+    {
+        catalog
+        title
+        description
+        accessurl
+        format
   }
 }
 
