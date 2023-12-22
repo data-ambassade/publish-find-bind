@@ -6,8 +6,14 @@ Deze API is ontwikkeld in het project Open Data Moet Stromen onder de naam: publ
 
 Het endpoint is: https://client.data-ambassade.nl/product/pfb
 
-Voorbeeld van een aanroep: 
-https://client.data-ambassade.nl/product/pfb?catalogus="open data rotterdam"&zoekterm=TIR
+Voorbeeld van een aanroep: https://client.data-ambassade.nl/product/pfb?catalogus="open data rotterdam"&zoekterm=TIR
+
+Toegepaste technologie:
+- GraphQL server (https://the-guild.dev) - gehost bij Scamander
+- Wundergraph (https://wundergraph.com/) - gehost bij Scamander
+- Nodered (https://nodered.org) - gehost op client.data-ambassade.nl 
+
+<img width="1004" alt="image" src="https://github.com/data-ambassade/publish-find-bind/assets/66671799/e727fc2c-f911-4a5c-b6ef-39a669c1dabf">
 
 De werking van de nodered flow is onderstaand weergegeven. De aanroep komt links binnen op de http node en wordt vervolgens via een switch naar de specifieke catalogus geleid. Daar wordt met de API van de applicatie een zoekopdracht uitgevoerd. Uit het resultaat worden de velden gehaald die met de url die verwijst naar de daadwerkelijke databron. Resultaat gaat als JSON terug.
 
