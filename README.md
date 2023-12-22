@@ -1,6 +1,6 @@
 # Generieke Catalogus service API
 
-Defunctionale API voor het vinden van datasets en dataservices met een keuze voor welke catalogus en welke zoekterm.
+Een functionale API voor het vinden van datasets en dataservices met een keuze voor welke catalogus en welke zoekterm.
 Beschikbaar als OpenApi YAML specificatie met een aanroep naar een end-point waarin de logica ingevuld is met nodered. 
 Deze API is ontwikkeld in het project Open Data Moet Stromen onder de naam: publish-find-bind.
 
