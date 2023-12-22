@@ -22,7 +22,7 @@ De OpenApi is tevens ontsloten als GraphQL endpoint via Wundergraph. Met Wunderg
 
 Daarin kan je deze query uitproberen waarbij je een dataset zoekt in de catalogus van het Open Urban Platform.
 
-\query publish_find_bind ($catalogus: String!, $zoekterm: String!) {
+query publish_find_bind ($catalogus: String!, $zoekterm: String!) {
   product_pfb_getProductPfb(catalogus: $catalogus, zoekterm: $zoekterm) {
     catalog
     title
@@ -30,14 +30,14 @@ Daarin kan je deze query uitproberen waarbij je een dataset zoekt in de catalogu
     accessurl
     format
   }
-}\
+}
 
 Met als variabelen:
 
-\{
+{
   "catalogus": "oup.rotterdam.nl",
   "zoekterm": "drinkwater"
-}\
+}
 
 
 ## Qgis plugin.
